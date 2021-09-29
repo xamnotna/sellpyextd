@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+//import Home from './Home/Home';
+//import Weather from './Weather';
+//import Contact from './Contact'; 
+import Header from './navigation/Header';
+
+import  { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+@import url(‘https://fonts.googleapis.com/css?family=Nunito|Roboto');
+*{
+  margin: 0;
+  padding: 0;
+  //text-decoration: none;
+  
+}
+body {
+  
+  background-color: #ffffff;
+
+  font-family: Nunito, Roboto, sans-serif;
+}}
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <GlobalStyle/>
+    <div>
+    <Router>
+      <Header />
+        <Switch>
+       {/*<Route path='/contact'>
+              <Contact />
+        </Route> */}
+
+         <Route path='/'>
+              {/* <Home /> */}
+         </Route>
+
+       </Switch>
+     
+     </Router>
     </div>
+    </>
   );
 }
 
