@@ -3,13 +3,17 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-
+import Repair from "./repair/Repair";
+import Info from "./info/Info";
+import Booking from "./booking/Booking";
 //import Home from './Home/Home';
 //import Weather from './Weather';
 //import Contact from './Contact'; 
 import Header from './navigation/Header';
+import * as ROUTES from './constants/Routes';
 
 import  { createGlobalStyle } from 'styled-components';
+
 
 const GlobalStyle = createGlobalStyle`
 @import url(‘https://fonts.googleapis.com/css?family=Nunito|Roboto');
@@ -35,9 +39,15 @@ function App() {
     <Router>
       <Header />
         <Switch>
-       {/*<Route path='/contact'>
-              <Contact />
-        </Route> */}
+       <Route path='/repair'>
+              <Repair/>
+        </Route>
+        <Route exact path={ROUTES.INFO}>
+              <Info/>
+        </Route>
+        <Route exact path={ROUTES.BOOKING}>
+              <Booking/>
+        </Route>
 
          <Route path='/'>
               {/* <Home /> */}
