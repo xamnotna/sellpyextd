@@ -5,6 +5,7 @@ import heart_icon from '../icons/heart.svg';
 import user_icon from '../icons/user.svg';
 import checkout_icon from '../icons/shopbag.svg';
 import repair_icon from '../icons/repair.svg';
+import sell_icon from '../icons/sell.svg';
 const StyledLi = styled.li`
 font-size: 26px;
 list-style: none;
@@ -88,11 +89,11 @@ const Header = () => (
                 <Link to="/repair"><img src={repair_icon} width="24px"  alt="repair"/></Link>
             </StyledLi>
             <StyledLi>
-                <Link to="/repair"><img src={repair_icon} width="24px"  alt="repair"/></Link>
+                <Link to="/repair"><img src={sell_icon} width="24px"  alt="repair"/></Link>
             </StyledLi>
-            <StyledLi>
+           {/*  <StyledLi>
                 <Link to="/repair"><p>SÄLJ</p></Link>
-            </StyledLi>
+            </StyledLi> */}
         </StyledUL>
     </StyledNav>
 );

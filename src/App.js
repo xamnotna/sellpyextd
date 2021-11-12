@@ -6,9 +6,8 @@ import {
 import Repair from "./repair/Repair";
 import Info from "./info/Info";
 import Booking from "./booking/Booking";
-//import Home from './Home/Home';
-//import Weather from './Weather';
-//import Contact from './Contact'; 
+import Home from './home/Home';
+import Confirmation from './booking/Confirmation';
 import Header from './navigation/Header';
 import * as ROUTES from './constants/Routes';
 
@@ -49,8 +48,12 @@ function App() {
               <Booking/>
         </Route>
 
+        <Route exact path={ROUTES.CONFIRM}>
+              <Confirmation/>
+        </Route>
+
          <Route path='/'>
-              {/* <Home /> */}
+              <Home />
          </Route>
 
        </Switch>

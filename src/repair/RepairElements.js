@@ -35,6 +35,16 @@ export const MainWrapper = styled.div`
     padding: 2em;
   }
 
+  & button {
+    flex-direction: row;
+    background-color: #212721;
+    color: white;
+    width: 322px;
+    padding: 8px;
+    ${'' /* padding-left: 12em;
+    padding-right: 12em; */}
+  }
+
 `
 
 
